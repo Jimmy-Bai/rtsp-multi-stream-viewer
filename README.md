@@ -21,19 +21,20 @@ This application is to be run on a **Dell Wyse 3040**, a thin client with non-up
 ├── config.yaml                  # User-editable YAML configuration
 ├── app/
 │   ├── __init__.py
-│   ├── config_loader.py         # Config parser and validator
-│   ├── error_handler.py         # Centralize error handler
-│   └── app_logger.py            # Rotating log system with memory monitoring
+│   ├── config.py         		 # Config parser and validator
+│   ├── error.py                 # Centralize error handler
+│   └── log.py                   # Rotating log system with memory monitoring
 ├── core/
 │   ├── __init__.py
 │   ├── stream_manager.py        # Stream lifecycle, reconnection logic
-│   └── mpv_player.py            # MPV wrapper, monitors stream health
+│   └── wrapper_mpv.py           # MPV wrapper, monitors stream health
 ├── gui/
 │   ├── __init__.py
-│   ├── app_window.py            # Main window, manages grid/cycle modes
+│   ├── window_window.py         # Main window, manages grid/cycle modes
 │   ├── widget_stream.py         # Individual stream container (video or placeholder)
 │   └── widget_placeholder.py    # "No Camera"/"Connection Lost"/"Connecting" display
 └── utils/
+	├── __init__.py 
     └── keyboard_handler.py      # Maps keys to actions
 ```
 
